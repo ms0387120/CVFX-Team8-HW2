@@ -15,7 +15,7 @@
 ## Compare with other methods
 ### 1. Neural-Style Transfer
 * 論文參考自這篇：[A Neural Algorithm of Artistic Style]("https://arxiv.org/pdf/1508.06576v2.pdf")
-* 論文中有說明如何使用CNN進行 **圖片風格轉換 (Style Transfer)**，非常適合進行**畫家風格轉換**，因為作者模擬**顏色**及**紋理**，就可以讓人感覺是某種畫風
+* 論文中有說明如何使用CNN進行 **圖片風格轉換 (Style Transfer)**，非常適合進行 **畫家風格轉換**，因為作者模擬 **目標圖的顏色、紋理**，就可以讓人感覺是某種畫風
 
     - 對原圖(Content Image)取出 **Content**
     - 對風格圖(Style Image)取出 **Style**
@@ -30,16 +30,16 @@
 
         - Replace Max-Pooling
         - Improve the gradient flow
+        - 架構圖簡易如下：
+        - ![](https://i.imgur.com/1DBY1V0.png)
 
-![](https://i.imgur.com/1DBY1V0.png)
-
-* 定義原圖 content loss function: **原圖與合成圖的特徵差距**
+* 定義 **原圖 content loss function**: **原圖與合成圖的特徵差距**
 
     - ![](https://i.imgur.com/0Q6zTs3.png)
     - P 是原圖內容的特徵向量
     - F 是合成圖內容的特徵向量
 
-* 定義風格圖 style loss function: **風格圖與合成圖的特徵差距** 
+* 定義 **合成圖 style loss function**: **風格圖與合成圖的特徵差距** 
 
     - 作者找到一個公式，較能接近的反應畫風的差距
     - ![](https://i.imgur.com/ugSCcd9.png)
@@ -64,6 +64,7 @@
 * 補充：
 
     - 使用 VGG19 與 VGG16 並無太大的差異，如果想要縮短執行時間，可以改用 VGG16 。此法還是有改善空間，比較好的方式是改變它的演算法，因此，後來有很多論文都在討論如何快速產生合成圖
+
 
 ---
 ## Conclusion
