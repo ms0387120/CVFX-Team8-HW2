@@ -14,7 +14,7 @@
 ---
 ## Compare with other methods
 ### 1. Neural-Style Transfer
-* 論文參考自這篇：[A Neural Algorithm of Artistic Style]("https://arxiv.org/pdf/1508.06576v2.pdf")
+* 論文參考自這篇：[A Neural Algorithm of Artistic Style](https://arxiv.org/pdf/1508.06576v2.pdf)
 * 論文中有說明如何使用CNN進行 **圖片風格轉換 (Style Transfer)**，非常適合進行 **畫家風格轉換**，因為作者模擬 **目標圖的顏色、紋理**，就可以讓人感覺是某種畫風
 
     - 對原圖(Content Image)取出 **Content**
@@ -31,21 +31,22 @@
         - Replace Max-Pooling
         - Improve the gradient flow
         - 架構圖簡易如下：
-        - ![](https://i.imgur.com/1DBY1V0.png)
+        ![](https://i.imgur.com/1DBY1V0.png)
 
 * 定義 **原圖 content loss function**: **原圖與合成圖的特徵差距**
 
-    - ![](https://i.imgur.com/0Q6zTs3.png)
+    ![](https://i.imgur.com/0Q6zTs3.png)
     - P 是原圖內容的特徵向量
     - F 是合成圖內容的特徵向量
 
 * 定義 **合成圖 style loss function**: **風格圖與合成圖的特徵差距** 
 
     - 作者找到一個公式，較能接近的反應畫風的差距
-    - ![](https://i.imgur.com/ugSCcd9.png)
-    - ![](https://i.imgur.com/t8f5hoB.png)
     - A 是原圖風格的特徵向量
     - G 是合成圖風格的特徵向量
+    ![](https://i.imgur.com/ugSCcd9.png)
+    ![](https://i.imgur.com/t8f5hoB.png)
+    
 
 * 最後，**計算 Total Loss = Content loss + Style Loss**
 
