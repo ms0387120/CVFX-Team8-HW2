@@ -95,6 +95,24 @@
 * 主要分成兩大步驟：(如圖所示)
 ![](https://imgur.com/5s71Mnk.png)
 
+
+* 程式碼參考自 [FastPhotoStyle](https://github.com/NVIDIA/FastPhotoStyle)
+
+* 測試如下：
+
+#### summer2winter
+![](https://imgur.com/FIcbxeW.jpg)
+
+* Neural-Style 的效果不是很好，除了第二張比較好，其餘的某些物件（比方說：天空、樹林）都會不自然。但畫風特色的確明顯展現出來
+* 由於 MUNIT效果也沒說好到哪裡去，只有content2的所有風格轉換的皆恰當。但兩者無法斷定哪個比較好看
+
+#### winter2summer
+![](https://imgur.com/gOOQcDP.jpg)
+
+* Neural-Style 的效果不是很好，除了第三張比較好，其餘的某些物件（比方說：天空、樹林）都會不自然。但畫風特色的確明顯展現出來。**但 winter2summer的效果比summer2winter還要差**
+* MUNIT的 Style1、3 轉換的都還算恰當
+* **在winter2summer，MUNIT 比 Neural-Style 效果好很多**
+
 ---
 ## Conclusion
 
