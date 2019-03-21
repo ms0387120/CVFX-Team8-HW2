@@ -103,15 +103,15 @@
 #### summer2winter
 ![](https://imgur.com/FIcbxeW.jpg)
 
-* Neural-Style 的效果不是很好，除了第二張比較好，其餘的某些物件（比方說：天空、樹林）都會不自然。但畫風特色的確明顯展現出來
-* 由於 MUNIT效果也沒說好到哪裡去，只有content2的所有風格轉換的皆恰當。但兩者無法斷定哪個比較好看
+* 不同於 Neural-Style 的將圖片轉化為"繪畫"風格，FastPhotoStyle在風格轉換上比較有真實感。
+* 從上圖的比較也可以發現，適當的style圖片選擇(整體的色調挑選)，能大大增加轉化出的真實性。
+* 雖然FastPhotoStyle的效果沒有到很好，但如果嚴格要跟MUNIT相比，FastPhotoStyle在成像的細緻度上，來得高一些。
 
 #### winter2summer
 ![](https://imgur.com/gOOQcDP.jpg)
 
-* Neural-Style 的效果不是很好，除了第三張比較好，其餘的某些物件（比方說：天空、樹林）都會不自然。但畫風特色的確明顯展現出來。**但 winter2summer的效果比summer2winter還要差**
-* MUNIT的 Style1、3 轉換的都還算恰當
-* **在winter2summer，MUNIT 比 Neural-Style 效果好很多**
+* FastPhotoStyle在做風格轉換時，好像更強調色彩的捕捉，所以再轉換為夏日時，抓取天空、樹木的色彩為主，不過仍有相當大的進步空間。
+* **winter2summer，FastPhotoStyle比MUNIT整體上更有夏日的感覺**
 
 ---
 ## Conclusion
