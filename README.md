@@ -70,6 +70,10 @@
 
     - 使用 VGG19 與 VGG16 並無太大的差異，如果想要縮短執行時間，可以改用 VGG16 。此法還是有改善空間，比較好的方式是改變它的演算法，因此，後來有很多論文都在討論如何快速產生合成圖
 
+### 2. FastPhotoStyle
+* 論文參考自這篇：[A Closed-form Solution to Photorealistic Image Stylization](https://arxiv.org/pdf/1802.06474.pdf)
+* 主要分成兩大步驟：(如圖所示)
+![](https://imgur.com/5s71Mnk.png)
 
 ---
 ## Conclusion
