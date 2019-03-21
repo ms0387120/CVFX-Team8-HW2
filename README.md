@@ -12,9 +12,16 @@
 
 ---
 ## Inference images in multiple style
+#### Winter to Summer
+![](https://i.imgur.com/gWGEzbB.jpg)
 
+#### Summer to Winter
+![](https://i.imgur.com/chQ6AJS.jpg)
 
-
+* Pros:  
+    - 可以產生不同風格的Style，有別於以往的Style Transfer
+* Cons:  
+    - 或許是因為此篇paper著重於產生不同風格的style，並沒有使用太多技巧來訓練GAN和修改細節，因此圖片效果和訓練的穩定性都不是很好
 ---
 ## Compare with other methods
 ### 1. Neural-Style Transfer
