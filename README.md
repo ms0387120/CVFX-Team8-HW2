@@ -18,10 +18,6 @@
 #### Summer to Winter
 ![](https://i.imgur.com/chQ6AJS.jpg)
 
-* Pros:  
-    - 可以產生不同風格的Style，有別於以往的Style Transfer
-* Cons:  
-    - 或許是因為此篇paper著重於產生不同風格的style，並沒有使用太多技巧來訓練GAN和修改細節，因此圖片效果和訓練的穩定性都不是很好
 
 ---
 ## Compare with other methods
@@ -92,6 +88,8 @@
 * MUNIT的 Style1、3 轉換的都還算恰當
 * **在winter2summer，MUNIT 比 Neural-Style 效果好很多**
 
+
+---
 ### 2. FastPhotoStyle
 * 論文參考自這篇：[A Closed-form Solution to Photorealistic Image Stylization](https://arxiv.org/pdf/1802.06474.pdf)
 * 主要分成兩大步驟：(如圖所示)
@@ -99,6 +97,38 @@
 
 ---
 ## Conclusion
+
+* **MUNIT**
+
+    - 優點
+
+        - 可以**生成一對多風格**，有別於以往的方法
+        - winter2summer的表現比Neural-Style方法好
+
+    - 缺點
+
+        - 或許是因為paper著重於產生不同風格的style，並沒有使用太多技巧來訓練GAN和修改細節，因此圖片效果和訓練的穩定性都不是很好
+
+* **Neural-Style**
+
+    - 優點
+
+        - **適合畫風轉換**
+
+    - 缺點
+
+        - 某些物件（比方說：天空、樹林）表現的不自然
+        - 由於使用VGG，合成的時間略久
+
+* **FastPhotoStyle**
+
+    - 優點
+
+        - A
+
+    - 缺點
+
+        - B
 
 
 ---
