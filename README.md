@@ -92,6 +92,9 @@
 ---
 ### 2. FastPhotoStyle
 * 論文參考自這篇：[A Closed-form Solution to Photorealistic Image Stylization](https://arxiv.org/pdf/1802.06474.pdf)
+* 過去使用的Ｎeural-based 方法(像是neural artistic style transfer 與 CNNMRF)，雖然可以生出風格轉換，但比較適合用來生成繪畫風格作品較不適合真實照片的融合，且常常會生成了有扭曲感的圖像。後來的deep photo style transfer 出現改善了這個問題，但生成上要花費不少時間。
+* 而此篇論文的成功在於它不僅在細節上能生成較為細緻的影像， 生成的時間也較短(生成單張影像的時間約只需 11 秒)。
+
 * 主要分成兩大步驟：(如圖所示)
 ![](https://imgur.com/5s71Mnk.png)
 
