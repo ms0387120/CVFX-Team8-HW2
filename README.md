@@ -103,7 +103,7 @@
    - 將 reference photo 裡的風格轉換到 content photo上PhotoWCT是以 WCT為基礎並在網絡上從新調整。WCT在繪畫風格時有不錯的表現，但在生成真實圖片上，就會有邊緣扭曲的問題(會有structural artifacts出現)。
    - 作者觀察到WCT 在做max-pooling後會降低feature maps上的空間資訊(spatial information)，於是PhotoWCT所做的是傳遞那些消失的空間資訊(spatial information)給decoder(如圖所示)。
 
-![](https://imgur.com/ldCp7X1.png)
+![](https://imgur.com/aRJbj4Q.png)
 
 #### (F2)The smoothing step ：
    - 為了解決生成的圖在該是同個區塊的部分有顏色不一致的問題。
