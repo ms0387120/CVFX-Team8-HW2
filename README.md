@@ -22,8 +22,10 @@
     - 可以產生不同風格的Style，有別於以往的Style Transfer
 * Cons:  
     - 或許是因為此篇paper著重於產生不同風格的style，並沒有使用太多技巧來訓練GAN和修改細節，因此圖片效果和訓練的穩定性都不是很好
+
 ---
 ## Compare with other methods
+
 ### 1. Neural-Style Transfer
 * 論文參考自這篇：[A Neural Algorithm of Artistic Style](https://arxiv.org/pdf/1508.06576v2.pdf)
 * 論文中有說明如何使用CNN進行 **圖片風格轉換 (Style Transfer)**，非常適合進行 **畫家風格轉換**，因為作者模擬 **目標圖的顏色、紋理**，就可以讓人感覺是某種畫風
@@ -42,22 +44,21 @@
         - Replace Max-Pooling
         - Improve the gradient flow
         - 架構圖簡易如下：
-        ![](https://i.imgur.com/1DBY1V0.png)
+        - ![](https://i.imgur.com/1DBY1V0.png)
 
 * 定義 **原圖 content loss function**: **原圖與合成圖的特徵差距**
 
-    ![](https://i.imgur.com/0Q6zTs3.png)
+    - ![](https://i.imgur.com/0Q6zTs3.png)
     - P 是原圖內容的特徵向量
     - F 是合成圖內容的特徵向量
 
 * 定義 **合成圖 style loss function**: **風格圖與合成圖的特徵差距** 
 
     - 作者找到一個公式，較能接近的反應畫風的差距
+    - ![](https://i.imgur.com/ugSCcd9.png)
+    - ![](https://i.imgur.com/t8f5hoB.png)
     - A 是原圖風格的特徵向量
     - G 是合成圖風格的特徵向量
-    ![](https://i.imgur.com/ugSCcd9.png)
-    ![](https://i.imgur.com/t8f5hoB.png)
-    
 
 * 最後，**計算 Total Loss = Content loss + Style Loss**
 
@@ -72,10 +73,24 @@
     - 求出合成圖的的特徵向量
     - 然後再還原影像
 
-* 程式碼參考自 [neural-style](https://github.com/anishathalye/neural-style)
-* 補充：
+>補充：使用 VGG19 與 VGG16 並無太大的差異，如果想要縮短執行時間，可以改用 VGG16 。此法還是有改善空間，比較好的方式是改變它的演算法，因此，後來有很多論文都在討論如何快速產生合成圖
 
-    - 使用 VGG19 與 VGG16 並無太大的差異，如果想要縮短執行時間，可以改用 VGG16 。此法還是有改善空間，比較好的方式是改變它的演算法，因此，後來有很多論文都在討論如何快速產生合成圖
+* 程式碼參考自 [neural-style](https://github.com/anishathalye/neural-style)
+
+* 測試如下：
+
+#### summer2winter
+![](https://i.imgur.com/0VWy3q1.jpg)
+
+* Neural-Style 的效果不是很好，除了第二張比較好，其餘的某些物件（比方說：天空、樹林）都會不自然。但畫風特色的確明顯展現出來
+* 由於 MUNIT效果也沒說好到哪裡去，只有content2的所有風格轉換的皆恰當。但兩者無法斷定哪個比較好看
+
+#### winter2summer
+![](https://i.imgur.com/uyv92NX.jpg)
+
+* Neural-Style 的效果不是很好，除了第三張比較好，其餘的某些物件（比方說：天空、樹林）都會不自然。但畫風特色的確明顯展現出來。**但 winter2summer的效果比summer2winter還要差**
+* MUNIT的 Style1、3 轉換的都還算恰當
+* **在winter2summer，MUNIT 比 Neural-Style 效果好很多**
 
 ### 2. FastPhotoStyle
 * 論文參考自這篇：[A Closed-form Solution to Photorealistic Image Stylization](https://arxiv.org/pdf/1802.06474.pdf)
@@ -84,7 +99,6 @@
 
 ---
 ## Conclusion
-
 
 
 ---
