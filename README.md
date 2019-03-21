@@ -3,8 +3,12 @@
 # HW2-Style-Transfer
 
 ## Training MUNIT
-
-
+#### 1. 照原本的參數train
+![](https://i.imgur.com/ULOo0uc.png)  
+然而我們發現，train到後面(190k iteration)時，圖片的效果反而開始下降了，因此打算試試看用其他參數重新train一個看看
+#### 2. batch size = 3
+![](https://i.imgur.com/kJdyPqO.png)  
+由於記憶體限制，我們只能將batch size調高到3試試看，期望能夠有更好的效果
 
 ---
 ## Inference images in multiple style
